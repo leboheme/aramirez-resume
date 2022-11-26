@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Postgraduate in Dessign and creation of videogames",
+    "description": "UOC. Universitat Oberta de Catalunya",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "2011",
+      "end": "2012"
+    },
+    "keywords": []
+  },
+  {
+    "title": "Degree in Informatics Engineering, Software engineering and information systems",
+    "description": "UPC. Universitat Politècnica de Catalunya",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "2002",
+      "end": "2010"
+    },
+    "keywords": []
+  }
+]

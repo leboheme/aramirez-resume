@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Languages",
+    "keywords": [
+      "Spanish",
+      "Catalan",
+      "English"
+    ]
+  },
+  {
+    "title": "Core dev",
+    "keywords": [
+      "Java",
+      "Javascript",
+      "C",
+      "C++",
+      "Cobol"
+    ]
+  },
+  {
+    "title": "Game dev",
+    "keywords": [
+      "Android",
+      "LibGDX",
+      "C++",
+      "OpenGL"
+    ]
+  },
+  {
+    "title": "App dev",
+    "keywords": [
+      "AngularJS",
+      "NodeJS",
+      "Express",
+      "CSS",
+      "Html5"
+    ]
+  },
+  {
+    "title": "Store dev",
+    "keywords": [
+      "MongoDB",
+      "Oracle",
+      "MySQL",
+      "PostreSQL"
+    ]
+  },
+  {
+    "title": "Version control",
+    "keywords": [
+      "Git",
+      "Mercurial",
+      "Subversion",
+      "Subversive"
+    ]
+  }
+]

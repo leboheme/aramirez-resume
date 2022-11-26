@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Guirld - Guide your world!",
+    "description": "Site to find and create/share travel guides.",
+    "period": {
+      "init": "2016",
+      "end": "Now"
+    },
+    "url": "https://guirld.com",
+    "keywords": [
+      "AngularJS",
+      "NodeJS",
+      "Express",
+      "MongoDB",
+      "Html5",
+      "CSS3",
+      "Bootstrap",
+      "Java",
+      "Android"
+    ]
+  },
+  {
+    "title": "Nyam nyam",
+    "description": "Old school arcade platformer game, based on Bubble Bobble.",
+    "period": {
+      "init": "2015",
+      "end": "2015"
+    },
+    "url": "https://play.google.com/store/apps/details?id=es.mindzero.nyamnyam",
+    "keywords": [
+      "LibGDX",
+      "Java",
+      "Android",
+      "Game"
+    ]
+  },
+  {
+    "title": "Earm",
+    "description": "Platformer and puzzle game.",
+    "period": {
+      "init": "2014",
+      "end": "2015"
+    },
+    "url": "https://play.google.com/store/apps/details?id=cat.leboheme.earm",
+    "keywords": [
+      "LibGDX",
+      "Java",
+      "Android",
+      "Game"
+    ]
+  },
+  {
+    "title": "Ggling",
+    "description": "Skill-based game.",
+    "period": {
+      "init": "2015",
+      "end": "2015"
+    },
+    "url": "https://play.google.com/store/apps/details?id=es.mindzero.ggling",
+    "keywords": [
+      "LibGDX",
+      "Java",
+      "Android",
+      "Game"
+    ]
+  },
+  {
+    "title": "Velox",
+    "description": "Skill-based game.",
+    "period": {
+      "init": "2015",
+      "end": "2015"
+    },
+    "url": "https://play.google.com/store/apps/details?id=es.mindzero.velox",
+    "keywords": [
+      "LibGDX",
+      "Java",
+      "Android",
+      "Game"
+    ]
+  }
+]

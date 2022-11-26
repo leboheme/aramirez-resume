@@ -1,0 +1,128 @@
+[
+  {
+    "title": "Senior technical analyst",
+    "subtitle": "eDreams ODIGEO",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "April 2014",
+      "end": "Now"
+    },
+    "keywords": [
+      "Java",
+      "Oracle SQL",
+      "Intellij Idea",
+      "Kanban",
+      "Agile",
+      "GDS",
+      "Amadeus"
+    ],
+    "description": "As part of the program focused in Amadeus GDS, I designed and developed different projects of maintenance and new features."
+  },
+  {
+    "title": "Technical analyst and maintenance lead",
+    "subtitle": "eDreams ODIGEO",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "April 2013",
+      "end": "April 2014"
+    },
+    "keywords": [
+      "Java",
+      "Oracle SQL",
+      "Intellij Idea",
+      "Kanban",
+      "Agile",
+      "Lead team award"
+    ]
+  },
+  {
+    "title": "Senior Java developer",
+    "subtitle": "eDreams ODIGEO",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "December 2011",
+      "end": "April 2013"
+    },
+    "description": "My main objective was to maintain the integrations with the flight suppliers using SOAP, REST o web scraping: Amadeus, Galileo, TravelFusion, Ryanair, Easyjet, Renfe.",
+    "keywords": [
+      "Java",
+      "Oracle SQL",
+      "Intellij Idea"
+    ]
+  },
+  {
+    "title": "Information System Technician",
+    "subtitle": "Fundacio Puigvert",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "February 2011",
+      "end": "December 2011"
+    },
+    "description": "Development and documentation of internal applications in Java, JSP and PHP.",
+    "keywords": [
+      "Java",
+      "JSP",
+      "PHP",
+      "ETL",
+      "Pentaho"
+    ]
+  },
+  {
+    "title": "Reinforcement tutoring",
+    "subtitle": "UPC - Universitat Politècnica de Catalunya",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "October 2010",
+      "end": "February 2011"
+    },
+    "description": "Reinforced workshop of 'Programming 2' at the Barcelona School of Informatics, Universitat Politècnica de Catalunya.",
+    "keywords": [
+      "Java",
+      "C++"
+    ]
+  },
+  {
+    "title": "Cobol developer",
+    "subtitle": "Inorme",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "September 2010",
+      "end": "February 2011"
+    },
+    "description": "Developing routines and procedures for banks in Cobol language.",
+    "keywords": [
+      "Cobol",
+      "Bank"
+    ]
+  },
+  {
+    "title": "Junior Java developer",
+    "subtitle": "UPCnet",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "September 2008",
+      "end": "February 2010"
+    },
+    "description": "Developing internal project management tool, and bug/issue tracking system tool, using OFBiz framework.",
+    "keywords": [
+      "Java",
+      "OFBiz",
+      "Javascript"
+    ]
+  },
+  {
+    "title": "IT scholar",
+    "subtitle": "ESADE",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "September 2007",
+      "end": "July 2008"
+    },
+    "description": "Performing practices at IT department: customer service, troubleshooting; software support; OS administration.",
+    "keywords": [
+      "CIT",
+      "OS",
+      "Windows"
+    ]
+  }
+]

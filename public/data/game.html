@@ -1,0 +1,50 @@
+<div class="container" ng-show="loadingGame">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 box-subtitle">
+            <div class="escapingBallG">
+                <h1> Loading game... </h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid no-animation text-center" ng-show="!loadingGame">
+    <div class="frame-box">
+        <!-- Canvas game -->
+        <canvas id="game" style="width : 100%"></canvas>
+        <!-- div for displaying the information -->
+        <div class="info-container text-left">
+            <div ng-show="items.length" class="item-list  animate-show-hide" ng-repeat="item in items track by $index"
+                 id="itemsList">
+                <h3 class="post-subtitle">
+                    {{ item.title }} <a ng-show="item.title && item.url" ng-attr-href="{{ item.url }}" target="_blank"> <span
+                        class="glyphicon glyphicon-link"
+                        aria-hidden="true"></span></a>
+                </h3>
+                <h4>
+                    <small ng-show="item.subtitle"> {{ item.subtitle }}.</small>
+                    <small ng-show="item.period.init">{{ item.period.init }}</small>
+                    <small ng-show="item.period.end"> - {{ item.period.end }}</small>
+                    <small ng-show="item.location">. {{ item.location }}</small>
+                </h4>
+                <p class="post-meta" ng-show="item.description">{{ item.description }} <a
+                        ng-show="!item.title && item.url"
+                        ng-attr-href="{{ item.url }}"
+                        target="_blank"> <span
+                        class="glyphicon glyphicon-link"
+                        aria-hidden="true"></span></a></p>
+                <div ng-show="item.levels">
+                    <h5 class="post-meta" ng-repeat="level in item.levels track by $index">
+                        {{ level.label }}
+                        <span ng-repeat="i in [1,2,3,4,5]" class="glyphicon"
+                              ng-class="i <= level.value ? 'glyphicon-star' : 'glyphicon-star-empty'"
+                              aria-hidden="true"></span>
+                    </h5>
+                </div>
+                <div>
+                    <span class="label label-default"
+                          ng-repeat="keyword in item.keywords track by $index">{{ keyword }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

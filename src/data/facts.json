@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Prize for team leading",
+    "subtitle": "eDreams ODIGEO",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "December 2013"
+    },
+    "description": "I won an annual prize for team leading inside the company."
+  },
+  {
+    "title": "Passion for videogames",
+    "period": {
+      "init": "Dayborn",
+      "end": "Now"
+    },
+    "description": "I love playing videogames since I was a kid."
+  },
+  {
+    "title": "Passion for drawings",
+    "period": {
+      "init": "Dayborn",
+      "end": "Now"
+    },
+    "description": "Although I draw less than when I was a kid, I still love drawing and creating things.",
+    "url": "http://lebohemebcn.deviantart.com/gallery/"
+  },
+  {
+    "title": "I tattoo too, although I have no tattoo on me."
+  },
+  {
+    "title": "Red Cross volunteer course",
+    "subtitle": "UPCnet",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "2009"
+    }
+  },
+  {
+    "title": "Great sense of humour"
+  },
+  {
+    "title": "I can't stop doing things",
+    "subtitle": "I like to read and learn about everything.",
+    "description": "I need to be occupied. Even doing nothing."
+  }
+]

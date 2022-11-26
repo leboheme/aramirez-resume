@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
 import './App.css';
+import './css/style.css';
+import Title from "./components/Title";
+import Footer from "./components/Footer";
+import GameArea from "./components/GameArea";
+import Terminal from "./components/Terminal";
+import intro from './data/intro.json';
+import {EventsService, GameEvent, GameEventType} from "./game/Events";
 
 function App() {
+  const [terminalItems, setTerminalItems] = useState(intro);
+  useEffect(() => {
+    EventsService.subscribe(GameEventType.Pick, (event: GameEvent) => {
+      const jsonPath = `./data/${event.value}.json`
+      const data = require(`${jsonPath}`)
+
+      setTerminalItems(data);
+    });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Title/>
+      <div className="frame-box">
+        <GameArea/>
+        <Terminal items={terminalItems}/>
+      </div>
+      <Footer/>
     </div>
   );
 }
