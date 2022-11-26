@@ -1,0 +1,201 @@
+[
+  {
+    "title": "Senior Software Enginer",
+    "url": "https://studentservices.flywire.com",
+    "subtitle": "Flywire",
+    "location": "Valencia, Spain",
+    "period": {
+      "init": "February 2020",
+      "end": "Ongoing"
+    },
+    "keywords": [
+      "Ruby",
+      "Java",
+      "React",
+      "Typescript",
+      "Docker",
+      "AWS",
+      "O11Y"
+    ],
+    "description": "As a member of Payer services team, I design, develop and maintain Flywire student services."
+  },
+  {
+    "title": "Senior Server Enginer",
+    "subtitle": "Scopely",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "November 2020",
+      "end": "February 2022"
+    },
+    "keywords": [
+      "C#",
+      "AngularJS",
+      "Scrabble",
+      "Dice/Yahtzee",
+      "AWS"
+    ],
+    "description": "As part of the server team in Scrabble and Dice/Yahtzee games, I designed and developed, using C# and AngularJS, different projects of maintenance and new features."
+  },
+  {
+    "title": "Senior Software Enginer",
+    "subtitle": "Flywire",
+    "location": "Valencia, Spain",
+    "period": {
+      "init": "February 2019",
+      "end": "November 2020"
+    },
+    "keywords": [
+      "Ruby",
+      "Java",
+      "Docker",
+      "AWS",
+      "Mongo"
+    ],
+    "description": "As a member of Reconciliation team and Payment Gateway team, I designed, developed and maintained different Ruby and Java applications related to banks and partners integrations."
+  },
+  {
+    "title": "Backend Game Developer",
+    "subtitle": "Social Point",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "November 2017",
+      "end": "January 2019"
+    },
+    "keywords": [
+      "PHP",
+      "Go",
+      "PhpStorm",
+      "Kanban",
+      "Scrum",
+      "Docker"
+    ],
+    "description": "As part of the Backend Team in Dragon City game, I design and develop, using PHP and Go, different projects of maintenance and new features."
+  },
+  {
+    "title": "Senior technical analyst",
+    "subtitle": "eDreams ODIGEO",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "April 2014",
+      "end": "November 2017"
+    },
+    "keywords": [
+      "Java",
+      "Oracle SQL",
+      "Intellij Idea",
+      "Kanban",
+      "Agile",
+      "GDS",
+      "Amadeus"
+    ],
+    "description": "As part of the program focused in Amadeus GDS, I designed and developed different projects of maintenance and new features. Furthermore, following the Agile Kanban methodology, the team is completely self-organizing and cross-functional, choosing how best to accomplish the work, rather than being directed by others outside the team."
+  },
+  {
+    "title": "Technical analyst and maintenance lead",
+    "subtitle": "eDreams ODIGEO",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "April 2013",
+      "end": "April 2014"
+    },
+    "keywords": [
+      "Java",
+      "Oracle SQL",
+      "Intellij Idea",
+      "Kanban",
+      "Agile",
+      "Lead team award"
+    ],
+    "description": "As part of the Supplier Connectivity Team, I led the technical design and managed the implementation of different projects regarding to supplier inventory acquisition. In order to improve the management and aligned with business objectives I introduced the team in the Kanban methodology, turning it into an agile team."
+  },
+  {
+    "title": "Senior Java developer",
+    "subtitle": "eDreams ODIGEO",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "December 2011",
+      "end": "April 2013"
+    },
+    "description": "My main objective was to maintain the integrations with the flight suppliers using SOAP, REST o web scraping: Amadeus, Galileo, TravelFusion, Ryanair, Easyjet, Renfe.",
+    "keywords": [
+      "Java",
+      "Oracle SQL",
+      "Intellij Idea"
+    ]
+  },
+  {
+    "title": "Information System Technician",
+    "subtitle": "Fundacio Puigvert",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "February 2011",
+      "end": "December 2011"
+    },
+    "description": "Development and documentation of internal applications in Java, JSP and PHP.",
+    "keywords": [
+      "Java",
+      "JSP",
+      "PHP",
+      "ETL",
+      "Pentaho"
+    ]
+  },
+  {
+    "title": "Reinforcement tutoring",
+    "subtitle": "UPC - Universitat Politècnica de Catalunya",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "October 2010",
+      "end": "February 2011"
+    },
+    "description": "Reinforced workshop of 'Programming 2' at the Barcelona School of Informatics, Universitat Politècnica de Catalunya.",
+    "keywords": [
+      "Java",
+      "C++"
+    ]
+  },
+  {
+    "title": "Cobol developer",
+    "subtitle": "Inorme",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "September 2010",
+      "end": "February 2011"
+    },
+    "description": "Developing routines and procedures for banks in Cobol language.",
+    "keywords": [
+      "Cobol",
+      "Bank"
+    ]
+  },
+  {
+    "title": "Junior Java developer",
+    "subtitle": "UPCnet",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "September 2008",
+      "end": "February 2010"
+    },
+    "description": "Developing internal project management tool, and bug/issue tracking system tool, using OFBiz framework.",
+    "keywords": [
+      "Java",
+      "OFBiz",
+      "Javascript"
+    ]
+  },
+  {
+    "title": "IT scholar",
+    "subtitle": "ESADE",
+    "location": "Barcelona, Spain",
+    "period": {
+      "init": "September 2007",
+      "end": "July 2008"
+    },
+    "description": "Performing practices at IT department: customer service, troubleshooting; software support; OS administration.",
+    "keywords": [
+      "CIT",
+      "OS",
+      "Windows"
+    ]
+  }
+]

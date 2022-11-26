@@ -1,0 +1,90 @@
+[
+  {
+    "title": "My interactive resume",
+    "description": "Just what you are seeing right now. It is made using pure typescript and a bit of React.",
+    "period": {
+      "init": "2023",
+      "end": "2023"
+    },
+    "url": "https://github.com/leboheme/aramirez-resume",
+    "keywords": [
+      "React",
+      "Typescript"
+    ]
+  },
+  {
+    "title": "Guirld - Guide your world!",
+    "description": "Site to find and create/share travel guides.",
+    "period": {
+      "init": "2016",
+      "end": "2017"
+    },
+    "keywords": [
+      "AngularJS",
+      "NodeJS",
+      "Express",
+      "MongoDB",
+      "Html5",
+      "CSS3",
+      "Bootstrap",
+      "Java",
+      "Android"
+    ]
+  },
+  {
+    "title": "Nyam nyam",
+    "description": "Old school arcade platformer game, based on Bubble Bobble.",
+    "period": {
+      "init": "2015",
+      "end": "2015"
+    },
+    "keywords": [
+      "LibGDX",
+      "Java",
+      "Android",
+      "Game"
+    ]
+  },
+  {
+    "title": "Earm",
+    "description": "Platformer and puzzle game.",
+    "period": {
+      "init": "2014",
+      "end": "2015"
+    },
+    "keywords": [
+      "LibGDX",
+      "Java",
+      "Android",
+      "Game"
+    ]
+  },
+  {
+    "title": "Ggling",
+    "description": "Skill-based game.",
+    "period": {
+      "init": "2015",
+      "end": "2015"
+    },
+    "keywords": [
+      "LibGDX",
+      "Java",
+      "Android",
+      "Game"
+    ]
+  },
+  {
+    "title": "Velox",
+    "description": "Skill-based game.",
+    "period": {
+      "init": "2015",
+      "end": "2015"
+    },
+    "keywords": [
+      "LibGDX",
+      "Java",
+      "Android",
+      "Game"
+    ]
+  }
+]
