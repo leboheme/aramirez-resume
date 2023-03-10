@@ -1,18 +1,13 @@
 import * as React from "react";
 import {useEffect} from "react";
-import Game from "../game/Game";
 import GameConfiguration from "../game/GameBuilder";
 import GameBuilder from "../game/GameBuilder";
-import {TController, TFocusCam, TGravity, TPickable} from "../game";
+import {Trait, Traits} from "../game";
 
 export default function GameArea() {
-  let secondsPassed: number;
-  let oldTimeStamp: number;
-  let game: Game;
-
   useEffect(() => {
     const gameBuilder = new GameBuilder('game');
-    game = gameBuilder.build({
+    const game = gameBuilder.build({
       sceneConfiguration: {
         size: {
           width: 2048,
@@ -40,7 +35,7 @@ export default function GameArea() {
               {type: 'Idle', name: "img/atlas.png", key: 12, frames: 8, loopNormal: true, secondsPerFrame: 0.2},
               {type: 'Wait', name: "img/atlas.png", key: 9, frames: 8, loopNormal: true, secondsPerFrame: 0.13},
             ],
-            traits: [{name: TPickable.name, opts: {event: 'facts'}}]
+            traits: [{name: Traits.Pickable, opts: {event: 'facts'}}]
           },
           {
             name: 'Monkey', position: {x: 896, y: 320}, size: {width: 64, height: 64},
@@ -48,7 +43,7 @@ export default function GameArea() {
               {type: 'Idle', name: "img/atlas.png", key: 12, frames: 8, loopNormal: true, secondsPerFrame: 0.2},
               {type: 'Wait', name: "img/atlas.png", key: 10, frames: 7, loopNormal: true, secondsPerFrame: 0.15},
             ],
-            traits: [{name: TPickable.name, opts: {event: 'experience'}}]
+            traits: [{name: Traits.Pickable, opts: {event: 'experience'}}]
           },
           {
             name: 'Star', position: {x: 1440, y: 64}, size: {width: 64, height: 64},
@@ -56,7 +51,7 @@ export default function GameArea() {
               {type: 'Idle', name: "img/atlas.png", key: 12, frames: 8, loopNormal: true, secondsPerFrame: 0.2},
               {type: 'Wait', name: "img/atlas.png", key: 13, frames: 4, loopNormal: true, secondsPerFrame: 0.15},
             ],
-            traits: [{name: TPickable.name, opts: {event: 'skills'}}]
+            traits: [{name: Traits.Pickable, opts: {event: 'skills'}}]
           },
           {
             name: 'Chicken', position: {x: 1088, y: 64}, size: {width: 64, height: 64},
@@ -64,7 +59,7 @@ export default function GameArea() {
               {type: 'Idle', name: "img/atlas.png", key: 12, frames: 8, loopNormal: true, secondsPerFrame: 0.09},
               {type: 'Wait', name: "img/atlas.png", key: 14, frames: 1, loopNormal: true, secondsPerFrame: 0.15},
             ],
-            traits: [{name: TPickable.name, opts: {event: 'education'}}]
+            traits: [{name: Traits.Pickable, opts: {event: 'education'}}]
           },
           {
             name: 'Chocobo', position: {x: 704, y: 64}, size: {width: 64, height: 64},
@@ -72,7 +67,7 @@ export default function GameArea() {
               {type: 'Idle', name: "img/atlas.png", key: 12, frames: 8, loopNormal: true, secondsPerFrame: 0.09},
               {type: 'Wait', name: "img/atlas.png", key: 15, frames: 6, loopNormal: true, secondsPerFrame: 0.15},
             ],
-            traits: [{name: TPickable.name, opts: {event: 'projects'}}]
+            traits: [{name: Traits.Pickable, opts: {event: 'projects'}}]
           },
           {
             name: 'Kirby', position: {x: 256, y: 64}, size: {width: 64, height: 64},
@@ -80,7 +75,7 @@ export default function GameArea() {
               {type: 'Idle', name: "img/atlas.png", key: 12, frames: 8, loopNormal: true, secondsPerFrame: 0.09},
               {type: 'Wait', name: "img/atlas.png", key: 11, frames: 10, loopNormal: true, secondsPerFrame: 0.1},
             ],
-            traits: [{name: TPickable.name, opts: {event: 'welcome'}}]
+            traits: [{name: Traits.Pickable, opts: {event: 'welcome'}}]
           },
           {
             name: 'Gluty', position: {x: 128, y: 250}, size: {width: 64, height: 64},
@@ -90,24 +85,14 @@ export default function GameArea() {
               {type: 'Fall', name: "img/atlas.png", key: 4, frames: 3, loopNormal: true, secondsPerFrame: 0.09},
               {type: 'Jump', name: "img/atlas.png", key: 6, frames: 3, loopNormal: true, secondsPerFrame: 0.09},
             ],
-            traits: [{name: TFocusCam.name}, {name: TGravity.name}, {name: TController.name}],
+            traits: [{name: Traits.FocusCam}, {name: Traits.Gravity}, {name: Traits.Controller}],
           },
         ],
       },
     } as GameConfiguration);
 
-    window.requestAnimationFrame(gameLoop);
+    game.start();
   }, []);
-
-  function gameLoop(timeStamp: number) {
-    // Calculate delta
-    secondsPassed = (timeStamp - oldTimeStamp) / 1000;
-    oldTimeStamp = timeStamp;
-
-    // Set a max secondsPassed to avoid lags/miscalculations
-    game.update(Math.min(secondsPassed, 0.017));
-    window.requestAnimationFrame(gameLoop);
-  }
 
   return (
     <canvas id="game"/>

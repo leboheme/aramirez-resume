@@ -1,5 +1,5 @@
-import {ICamera} from "../Cameras";
-import {Point2} from "../Math";
+import { ICamera } from "../Cameras";
+import { Point2 } from "../Math";
 
 export interface ITexture {
   update(delta: number): void;

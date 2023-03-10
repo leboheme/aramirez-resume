@@ -1,31 +1,26 @@
 import Scene from "../../Scene";
-import {TGravity} from "./TGravity";
-import {TController} from "./TController";
-import {TPickable} from "./TPickable";
-import {TFocusCam} from "./TFocusCam";
-import {Entity} from "../Entity";
+import { TGravity } from "./TGravity";
+import { TController } from "./TController";
+import { TPickable } from "./TPickable";
+import { TFocusCam } from "./TFocusCam";
+import { Entity } from "../Entity";
 
 export interface ITrait {
   update(delta: number, scene: Scene): void;
 }
 
-export const SupportedTraits: any = {
-  TGravity,
-  TController,
-  TPickable,
-  TFocusCam,
-};
+export const Traits = {
+  Gravity: TGravity,
+  Controller: TController,
+  Pickable: TPickable,
+  FocusCam: TFocusCam
+} as const;
+
+export type Trait = typeof Traits[keyof typeof Traits];
 
 export class DynamicTrait {
-  constructor(className: string, entity: Entity, opts: any) {
-    if (
-      SupportedTraits[className] === undefined ||
-      SupportedTraits[className] === null
-    ) {
-      throw new Error(
-        `Class type of \'${className}\' is not a supported trait`
-      );
-    }
-    return new SupportedTraits[className](entity, opts);
+  constructor(className: Trait, entity: Entity, opts: any) {
+    const newClass: any = new className(entity, opts);
+    return newClass;
   }
 }

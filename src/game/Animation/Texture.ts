@@ -1,7 +1,7 @@
-import {ICamera} from "../Cameras";
-import {Dimension2, Point2} from "../Math";
-import {ITexture} from "./ITexture";
-import {ImageService} from "./index";
+import { ICamera } from "../Cameras";
+import { Dimension2, Point2 } from "../Math";
+import { ITexture } from "./ITexture";
+import { ImageService } from "./index";
 
 export class AnimatedTexture implements ITexture {
   private loopNormal: boolean;

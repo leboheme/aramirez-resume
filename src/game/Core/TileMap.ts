@@ -1,4 +1,4 @@
-import {ICamera} from "../Cameras";
+import { ICamera } from "../Cameras";
 
 export default class TileMap {
   private atlas: CanvasImageSource;

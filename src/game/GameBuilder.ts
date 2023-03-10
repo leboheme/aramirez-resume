@@ -1,10 +1,10 @@
 import Game from "./Game";
 import Scene from "./Core/Scene";
 import TileMap from "./Core/TileMap";
-import {DynamicTrait, ITrait, SupportedTraits} from "./Core/Entities/traits/ITrait";
-import {Dimension2, Point2} from "./Math";
-import {AnimatedTexture, ImageService} from "./Animation";
-import {Entity, EntityState, State} from "./Core/Entities";
+import { DynamicTrait, ITrait, Trait } from "./Core/Entities/traits/ITrait";
+import { Dimension2, Point2 } from "./Math";
+import { AnimatedTexture, ImageService } from "./Animation";
+import { Entity, EntityState, State } from "./Core/Entities";
 
 export default interface GameConfiguration {
   sceneConfiguration: SceneConfiguration;
@@ -33,7 +33,7 @@ export interface EntityConfiguration {
 }
 
 export interface TraitConfiguration {
-  name: typeof SupportedTraits;
+  name: Trait;
   opts?: Map<string, any>;
 }
 
@@ -86,23 +86,28 @@ export default class GameBuilder {
         conf.position,
         conf.size,
         new EntityState(
-          conf.state.reduce(function (map, state): Map<State, AnimatedTexture> {
-            map.set(state.type, new AnimatedTexture(
-              state.name,
-              state.key,
-              state.frames,
-              state.loopInverse,
-              state.loopNormal,
-              state.size ?? conf.size,
-              state.secondsPerFrame
-            ));
+          conf.state.reduce(function(map, state): Map<State, AnimatedTexture> {
+            map.set(
+              state.type,
+              new AnimatedTexture(
+                state.name,
+                state.key,
+                state.frames,
+                state.loopInverse,
+                state.loopNormal,
+                state.size ?? conf.size,
+                state.secondsPerFrame
+              )
+            );
             return map;
-          }, new Map<State, AnimatedTexture>)
+          }, new Map<State, AnimatedTexture>())
         )
       );
-      conf.traits.forEach((trait) =>
-        entity.addTrait(new DynamicTrait(trait.name, entity, trait.opts) as ITrait)
-      )
+      conf.traits.forEach(trait =>
+        entity.addTrait(
+          new DynamicTrait(trait.name, entity, trait.opts) as ITrait
+        )
+      );
 
       return entity;
     });

@@ -1,2 +1,2 @@
-export * from './ICamera'
-export {SideOnCameraInstance as SideOnCamera} from './Camera'
+export * from "./ICamera";
+export { SideOnCameraInstance as SideOnCamera } from "./Camera";

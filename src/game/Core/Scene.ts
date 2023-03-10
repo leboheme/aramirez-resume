@@ -1,7 +1,7 @@
 import TileMap from "./TileMap";
-import {ICamera} from "../Cameras";
-import {Dimension2} from "../Math";
-import {Entity} from "./Entities";
+import { ICamera } from "../Cameras";
+import { Dimension2 } from "../Math";
+import { Entity } from "./Entities";
 
 export default class Scene {
   public size: Dimension2;
@@ -46,7 +46,8 @@ export default class Scene {
               col * this.tileMap.tileSize,
               col * this.tileMap.tileSize + this.tileMap.tileSize,
               (this.tileMap.tiles.length - row - 1) * this.tileMap.tileSize,
-              (this.tileMap.tiles.length - row - 1) * this.tileMap.tileSize + this.tileMap.tileSize
+              (this.tileMap.tiles.length - row - 1) * this.tileMap.tileSize +
+                this.tileMap.tileSize
             )
           ) {
             entity.position.x =
@@ -77,14 +78,18 @@ export default class Scene {
               col * this.tileMap.tileSize,
               col * this.tileMap.tileSize + this.tileMap.tileSize,
               (this.tileMap.tiles.length - row - 1) * this.tileMap.tileSize,
-              (this.tileMap.tiles.length - row - 1) * this.tileMap.tileSize + this.tileMap.tileSize
+              (this.tileMap.tiles.length - row - 1) * this.tileMap.tileSize +
+                this.tileMap.tileSize
             )
           ) {
             entity.position.y =
               entity.velocity.y > 0
-                ? (this.tileMap.tiles.length - row - 1) * this.tileMap.tileSize -
-                entity.size.height
-                : (this.tileMap.tiles.length - row - 1) * this.tileMap.tileSize + this.tileMap.tileSize;
+                ? (this.tileMap.tiles.length - row - 1) *
+                    this.tileMap.tileSize -
+                  entity.size.height
+                : (this.tileMap.tiles.length - row - 1) *
+                    this.tileMap.tileSize +
+                  this.tileMap.tileSize;
             entity.grounded = entity.velocity.y < 0;
             entity.velocity.y = 0;
             entity.acceleration.y = 0;

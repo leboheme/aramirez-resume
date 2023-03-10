@@ -6,12 +6,12 @@ import Footer from "./components/Footer";
 import GameArea from "./components/GameArea";
 import Terminal from "./components/Terminal";
 import intro from './data/intro.json';
-import {EventsService, GameEvent, GameEventType} from "./game/Events";
+import {EventsService, GameEvent, GameEventTypes,} from "./game/Events";
 
 function App() {
   const [terminalItems, setTerminalItems] = useState(intro);
   useEffect(() => {
-    EventsService.subscribe(GameEventType.Pick, (event: GameEvent) => {
+    EventsService.subscribe(GameEventTypes.Pick, (event: GameEvent) => {
       const jsonPath = `./data/${event.value}.json`
       const data = require(`${jsonPath}`)
 

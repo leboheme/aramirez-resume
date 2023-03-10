@@ -1,4 +1,4 @@
-import {Sound} from "./Sound";
+import { Sound } from "./Sound";
 
 class AudioService {
   private sounds: Map<string, HTMLAudioElement>;
@@ -11,7 +11,7 @@ class AudioService {
     if (this.sounds.has(sound)) return;
 
     var audio = new Audio(sound);
-    audio.volume = .08;
+    audio.volume = 0.08;
     audio.load();
     this.sounds.set(sound, audio);
   }

@@ -1,7 +1,7 @@
 import Scene from "../Core/Scene";
-import {ICamera} from "./ICamera";
-import {Dimension2, Point2} from "../Math";
-import {ControllerInput, ControllerService} from "../Controllers";
+import { ICamera } from "./ICamera";
+import { Dimension2, Point2 } from "../Math";
+import { ControllerInputs, ControllerService } from "../Controllers";
 
 class SideOnCamera implements ICamera {
   // @ts-ignore
@@ -28,9 +28,13 @@ class SideOnCamera implements ICamera {
     if (!context) throw new Error("context null");
 
     const resize = () => {
-      canvas.width = this.size.width = window.innerWidth < 400 ? context.canvas.getBoundingClientRect().width * 0.95 : window.innerWidth * 0.95;
-      canvas.height = this.size.height = window.innerWidth < 400 ? window.innerHeight / 2 : 400;
-    }
+      canvas.width = this.size.width =
+        window.innerWidth < 400
+          ? context.canvas.getBoundingClientRect().width * 0.95
+          : window.innerWidth * 0.95;
+      canvas.height = this.size.height =
+        window.innerWidth < 400 ? window.innerHeight / 2 : 400;
+    };
     resize();
     window.removeEventListener("resize", resize);
     window.addEventListener("resize", resize);
@@ -41,34 +45,41 @@ class SideOnCamera implements ICamera {
     this.boundaries.width = scene.size.width;
     this.boundaries.height = scene.size.height;
 
-    const camera = this
-    const checkTouch = function (event: TouchEvent) {
+    const camera = this;
+    const checkTouch = function(event: TouchEvent) {
       if (event.target != canvas) return;
 
-      if (event.touches[0].clientY - canvas.getBoundingClientRect().top < camera.size.height / 2) {
-        ControllerService.press(ControllerInput[ControllerInput.ArrowUp])
+      if (
+        event.touches[0].clientY - canvas.getBoundingClientRect().top <
+        camera.size.height / 2
+      ) {
+        ControllerService.press("ArrowUp");
       }
       if (event.touches[0].clientX < window.innerWidth / 2) {
-        ControllerService.press(ControllerInput[ControllerInput.ArrowLeft])
+        ControllerService.press("ArrowLeft");
       } else {
-        ControllerService.press(ControllerInput[ControllerInput.ArrowRight])
+        ControllerService.press("ArrowRight");
       }
     };
     window.addEventListener("touchstart", checkTouch);
     window.addEventListener("touchmove", checkTouch);
-    window.addEventListener("touchmove", function (event: TouchEvent) {
-      if (event.target == canvas) {
-        event.preventDefault();
-      }
-    }, { passive: false });
-    window.addEventListener("touchend", function (event: TouchEvent) {
+    window.addEventListener(
+      "touchmove",
+      function(event: TouchEvent) {
+        if (event.target == canvas) {
+          event.preventDefault();
+        }
+      },
+      { passive: false }
+    );
+    window.addEventListener("touchend", function(event: TouchEvent) {
       ControllerService.clear();
-    })
-    window.addEventListener("contextmenu", function (event: MouseEvent) {
+    });
+    window.addEventListener("contextmenu", function(event: MouseEvent) {
       event.preventDefault();
       event.stopPropagation();
-    })
-    canvas.onwheel = function (event) {
+    });
+    canvas.onwheel = function(event) {
       event.preventDefault();
     };
   }
@@ -84,7 +95,7 @@ class SideOnCamera implements ICamera {
 
     if (this.focus.y < this.size.height / 2) {
       this.position.y = 0;
-    } else if (this.focus.y > this.boundaries.height - (this.size.height / 2)) {
+    } else if (this.focus.y > this.boundaries.height - this.size.height / 2) {
       this.position.y = this.boundaries.height - this.size.height;
     } else {
       this.position.y = this.focus.y - this.size.height / 2;

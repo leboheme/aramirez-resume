@@ -1,14 +1,16 @@
-import {ICamera} from "../../Cameras";
-import {Point2} from "../../Math";
-import {ITexture} from "../../Animation";
+import { ICamera } from "../../Cameras";
+import { Point2 } from "../../Math";
+import { ITexture } from "../../Animation";
 
-export enum State {
-  Idle = "Idle",
-  Walk = "Walk",
-  Fall = "Fall",
-  Jump = "Jump",
-  Wait = "Wait",
-}
+export const States = {
+  Idle: "Idle",
+  Walk: "Walk",
+  Fall: "Fall",
+  Jump: "Jump",
+  Wait: "Wait"
+} as const;
+
+export type State = typeof States[keyof typeof States];
 
 export class EntityState {
   private states: Map<State, ITexture>;
@@ -17,10 +19,10 @@ export class EntityState {
 
   constructor(states: Map<State, ITexture>) {
     this.states = states;
-    this.set(State.Idle);
-    this.currentState = State.Idle;
+    this.set(States.Idle);
+    this.currentState = States.Idle;
     // @ts-ignore
-    this.currentTexture = this.states.get(State.Idle);
+    this.currentTexture = this.states.get(States.Idle);
   }
 
   update(delta: number): void {

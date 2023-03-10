@@ -1,8 +1,8 @@
 import Scene from "../Scene";
-import {ICamera} from "../../Cameras";
-import {Dimension2, Point2, Vector2} from "../../Math";
-import {EntityState} from "./EntityState";
-import {ITrait} from "./traits";
+import { ICamera } from "../../Cameras";
+import { Dimension2, Point2, Vector2 } from "../../Math";
+import { EntityState } from "./EntityState";
+import { ITrait } from "./traits";
 
 export class Entity {
   public name: string;

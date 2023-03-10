@@ -1,7 +1,7 @@
 import Scene from "../../Scene";
-import {State} from "../EntityState";
-import {ITrait} from "./ITrait";
-import {Entity} from "../Entity";
+import { State, States } from "../EntityState";
+import { ITrait } from "./ITrait";
+import { Entity } from "../Entity";
 
 const GRAVITY = -0.06;
 const DAMP_FACTOR = 0.8;
@@ -25,11 +25,13 @@ export class TGravity implements ITrait {
     this.entity.position.x += this.entity.velocity.x;
     this.entity.position.y += this.entity.velocity.y;
 
-    if (this.entity.velocity.y < 0 && !this.entity.grounded) this.entity.state.set(State.Fall)
-    else if (this.entity.velocity.y > 0 && !this.entity.grounded) this.entity.state.set(State.Jump);
+    if (this.entity.velocity.y < 0 && !this.entity.grounded)
+      this.entity.state.set(States.Fall);
+    else if (this.entity.velocity.y > 0 && !this.entity.grounded)
+      this.entity.state.set(States.Jump);
     else {
-      if (this.entity.velocity.x != 0) this.entity.state.set(State.Walk);
-      else this.entity.state.set(State.Idle);
+      if (this.entity.velocity.x != 0) this.entity.state.set(States.Walk);
+      else this.entity.state.set(States.Idle);
     }
   }
 }

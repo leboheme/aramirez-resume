@@ -1,2 +1,2 @@
-export {AudioServiceInstance as AudioService} from './AudioService';
-export * from './Sound';
+export { AudioServiceInstance as AudioService } from "./AudioService";
+export * from "./Sound";
