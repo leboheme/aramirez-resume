@@ -33,11 +33,12 @@
   },
   {
     "title": "Nyam nyam",
-    "description": "Old school arcade platformer game, based on Bubble Bobble.",
+    "description": "Old school arcade platformer game, based on Bubble Bobble. You can check it on itch.io",
     "period": {
       "init": "2015",
       "end": "2015"
     },
+    "url": "https://leboheme.itch.io/nyam-nyam",
     "keywords": [
       "LibGDX",
       "Java",
@@ -47,11 +48,12 @@
   },
   {
     "title": "Earm",
-    "description": "Platformer and puzzle game.",
+    "description": "Platformer and puzzle game. You can check it on itch.io",
     "period": {
       "init": "2014",
       "end": "2015"
     },
+    "url": "https://leboheme.itch.io/earm",
     "keywords": [
       "LibGDX",
       "Java",

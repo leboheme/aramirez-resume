@@ -27,7 +27,7 @@ export default function Terminal({items}: { items: Array<TerminalItem> }) {
             <h3 className="post-subtitle">
               {item.title}
               {item.url && <a href={item.url} target="_blank">
-                <span className="glyphicon glyphicon-link" aria-hidden="true"/>
+                &nbsp;<span className="glyphicon glyphicon-link" aria-hidden="true"/>
               </a>}
             </h3>
           }
